@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./HexRow.module.css";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HexRow = (props) => {
   const { hex } = props;
