@@ -1,0 +1,26 @@
+.row {
+  list-style: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.row + .row {
+  margin-top: 0.5rem;
+}
+
+.hexName {
+  font: 700 18px /1 sans-serif;
+}
+
+.hexTrait {
+  font: 400 16px sans-serif;
+  margin-top: 0.25rem;
+}
+
+.hexLink {
+  display: block;
+  padding: 1rem;
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
