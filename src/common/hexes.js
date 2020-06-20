@@ -1,0 +1,161 @@
+export default [
+  {
+    id: 1,
+    name: "Ace in the hole",
+    trait: "Knowledge",
+    hand: "Two Pairs",
+    speed: "10 minutes",
+    duration: "1 day/hex level",
+    range: "Touch",
+    description:
+      "Hucksters don’t usually play well with others.When they do, the effects can be spectacular.This hex allows the caster to provide anotherperson with a magical “Ace in the hole.” Thehuckster links a hex he can cast to a smallfocus of some sort, usually a playing card, whichcan then be given to another. The holder of thisfocus can cast the hex just as if she were thehuckster.When this person triggers the link, she rollsthe huckster’s skill with the hex but substitutesher Trait dice for the huckster’s. If successful,she draws the cards indicated by the roll. Ofcourse, this means she suffers any backlash as well. Going bust on the hex Aptitude roll anddrawing any Joker, in this case, regardless ofeither person’s skill, causes backlash.There are a few limitations on Ace in the hole.First, the link only lasts 1 day per the huckster’slevel in Ace in the hole. Second, any hexes whichcould only be cast on others (helpin’ hand, etc.)cannot be cast on either the original huckster orthe person holding the Ace—they must target athird person. Any hex which can normally onlybe used on the huckster, can now be used eitheron the huckster or the person holding the Ace.Finally, while a hex is linked to an Ace in thehole, the huckster cannot cast that hex himself.",
+  },
+  {
+    id: 2,
+    name: "Beast Master",
+    trait: "Smarts",
+    hand: "Pair",
+    speed: "1",
+    duration: "Concentration",
+    range: "5 yards/hex level",
+    description:
+      "With call o’ the wild, a huckster can summonanimal allies to his aid. Sometimes, however, hemay find there is no need to summon theanimals—they’re already there. Beast master letsa huckster mentally command animals withinrange of the hex.Unlike call o’ the wild, this hex doesn’t givethe huckster much choice over what animals hegets. He’s limited to what’s on hand when hecasts the hex. The affected animals do hisbidding as long as he continues to concentrate.As soon as he stops, however, the animals revertto their normal actions.Beast master doesn’t impart any intelligence tothe animals it affects. The caster shouldn’texpect a squirrel to read a note over the badguy’s shoulder. Controlled animals must stillmake guts checks when faced with supernatural opponents. If the animals the huckster targets are trainedor under the control of someone with theanimal wranglin’ Aptitude, it’s a little tougher tomanage. Make an opposed roll between the twoattempting to control the varmints, the caster’sbeast master skill versus the other’s animalwranglin’. Characters on horseback use theirhorse ridin’ instead. If the huckster loses thiscontest, the hex fails.The number of animals the huckster cancontrol is based on the hand he draws.",
+    handTable: {
+      effect: "Number",
+      hands: {
+        Pair: "1d6",
+        Jacks: "3d6",
+        "Two Pairs": "4d8",
+        "Three of a Kind": "5d8",
+        Straight: "6d8",
+        Flush: "7d10",
+        "Full House": "8d10",
+        "Four of a Kind": "9d10",
+        "Straight Flush": "10d12",
+        "Royal Flush": "10d20",
+      },
+    },
+  },
+  {
+    id: 3,
+    name: "Confound",
+    trait: "Smarts",
+    hand: "Ace",
+    speed: "1",
+    duration: "1 round",
+    range: "5 yards/hex level",
+    description:
+      "A huckster using confound cannot only makesomething harder than it looked, he can make itharder than it is!This hex causes the Target Number for anysingle Trait or Aptitude roll to increase indifficulty. Raises for this roll are figured from thenew adjusted TN. It is effective against evenmagical Aptitudes like hexes, rituals, and even ablessed’s faith rolls. Confound only affects the next action made bythe target. If the next action the target makesdoesn’t involve an Aptitude or Trait roll, the hexis wasted. Additionally, if a full round elapseswithout the target taking an action, the hex iswasted.The increase of the Target Number is basedon the hand drawn by the huckster. Theminimum hand increases the TN by +2. Eachhand above the minimum required adds anadditional +2 to the TN.",
+  },
+  {
+    id: 4,
+    name: "Corporeal Twist",
+    trait: "Smarts",
+    hand: "Pair",
+    speed: "1",
+    duration: "Concentration or 1 Wind/round",
+    range: "5 yards/hex level",
+    description:
+      "Corporeal twist is the opposite of corporealtweak. It lowers one of a target’s physical Traitsby one die type for each of the hands listedunder corporeal tweak. Once the die type hasdropped to a d4, the Coordination drops by 1 foreach level, down to a minimum of 1d4. A subjectcan only be affected by one corporeal twist at atime. Any further corporeal twists cast on atarget while one is still in effect automaticallyfail. ",
+  },
+  {
+    id: 5,
+    name: "Helpin' Hand",
+    trait: "Smarts",
+    hand: "Ace",
+    speed: "10 minutes",
+    duration: "Permanent",
+    range: "1 yard",
+    description:
+      "Helpin’ hand allows a huckster to heal asuffering companion’s wounds (not his own).Each successful casting reduces the wounds inall areas by 1 level each. During this time thecaster can take no actions other than sittingnear the patient and waiting (a good time tobrush up on one’s solitaire).The hand needed depends on the victim’shighest wound level. Note that helpin’ hand can’theal more than 1 level of wounds at a time. Thehuckster can treat several wound levels bycasting the hex more than once, however. Helpin’hand also can’t restore maimed limbs. Only thedivine favors of shamans and the blessed canpull off that trick.Undead, like the Harrowed, cannot be affectedby this hex. To fix their wounds, the huckstermust use the reanimate hex.",
+    handTable: {
+      effect: "Wound",
+      hands: {
+        Pair: "1d6",
+        Jacks: "3d6",
+        "Two Pairs": "4d8",
+        "Three of a Kind": "5d8",
+        Straight: "6d8",
+        Flush: "7d10",
+        "Full House": "8d10",
+        "Four of a Kind": "9d10",
+        "Straight Flush": "10d12",
+        "Royal Flush": "10d20",
+      },
+    },
+  },
+  {
+    id: 6,
+    name: "Mirage",
+    trait: "Smarts",
+    hand: "Pair",
+    speed: "2",
+    duration: "Concentration or 1 Wind/round",
+    range: "5 yards/hex level",
+    description:
+      "Many a cowpoke has been misled by a mirage.Not all of these are natural phenomenon—somesprang from a hand of cards!This hex allows a huckster to create anillusion of a place or inanimate object. For thepurposes of this hex, normal plants such asgrass and trees are considered inanimate. The effects of the hex are limited to an areaequal to 200 square feet per hex level. This is theequivalent of a 20’ x 10’ rectangle, although thehuckster can modify this area into any shape, aslong it does not exceed the limit. If needed, thehuckster can move the illusion as appropriatewithin the range of the hex. Note, though, thatany illusionary objects created with this hexmust be three dimensional. Your huckster can’textend the size of his illusion by making alocomotive which appears normal from the sidebut which is only 1” wide.The illusion produced by the hex is veryrealistic. So much so, in fact, that anyoneviewing it must first have a reason to doubt itsexistence—and then make a Hard (9) Cognitionroll—to recognize it for false. Anyone attemptingto touch an illusion realizes it to be falsewithout having to roll. Also, since it is visual, ithas absolutely no effect on the blind orcreatures that do not use vision as their primarysense.The precision of the hex is limited by thehand the huckster draws. Initially, only simpleobjects can be reproduced, but with higherhands he can produce very intricate illusions.",
+    handTable: {
+      effect: "Complexity",
+      hands: {
+        Ace: "Single uniform object(blank wall or moundof dirt)",
+        Pair: "Single simple object orarea (door, emptyroom, muddy pond)",
+        Jacks:
+          "Single moderately diverseobject (wagon, rifle,single dead tree)",
+        "Two Pair":
+          "Single complex object ormultiple simple objects(Gatling gun, sparselyfurnished room, singlelive tree)",
+        "Three of a Kind":
+          "Multiple moderatelydiverse objects(furnished room,garden)",
+        Straight: "Multiple complex objects(complete building,train)",
+        Flush: "Extremely complexobjects (interior of agizmo)",
+      },
+    },
+  },
+  {
+    id: 7,
+    name: "Raisin' the Pot",
+    trait: "Smarts",
+    hand: "Pair",
+    speed: "1",
+    duration: "Concentration or 1 Wind/round",
+    range: "5 yards/hex level",
+    description:
+      "Corporeal twist is the opposite of corporealtweak. It lowers one of a target’s physical Traitsby one die type for each of the hands listedunder corporeal tweak. Once the die type hasdropped to a d4, the Coordination drops by 1 foreach level, down to a minimum of 1d4. A subjectcan only be affected by one corporeal twist at atime. Any further corporeal twists cast on atarget while one is still in effect automaticallyfail. ",
+  },
+  {
+    id: 8,
+    name: "Shadow Man",
+    trait: "Smarts",
+    hand: "Pair",
+    speed: "1",
+    duration: "Concentration or 1 Wind/round",
+    range: "5 yards/hex level",
+    description:
+      "Corporeal twist is the opposite of corporealtweak. It lowers one of a target’s physical Traitsby one die type for each of the hands listedunder corporeal tweak. Once the die type hasdropped to a d4, the Coordination drops by 1 foreach level, down to a minimum of 1d4. A subjectcan only be affected by one corporeal twist at atime. Any further corporeal twists cast on atarget while one is still in effect automaticallyfail. ",
+  },
+  {
+    id: 9,
+    name: "Soul Blast",
+    trait: "Spirit",
+    hand: "Ace",
+    speed: "1",
+    duration: "Instant",
+    range: "50 yards/hex level",
+    description:
+      "The hexslinger’s best friend is the soul blasthex. When cast, an almost invisible stream ofghostly white energy races from the huckster’spalm toward his target. The stream slams intothe victim like a bullet. Unlike a bullet, however,soul blast has no effect on inanimate objects(Harrowed, Walkin’ Dead, and other abominationsare very animate, by the way!) because it ispurely spiritual energy. The blast can onlydamage things which have a spiritual componentto them—people, animals, undead, Harrowed, etc.Just because the hex comes off doesn’t meanit hits its target. Determine the Target Numberlike a gunshot, starting with a Fair (5) TN. Ignorerange, but figure other penalties such as cover,size, etc. The caster can even attempt a calledshot if he wishes.Roll the huckster’s soul blast skill, and usethat result as both your attack roll and to figurehow many cards you get to draw. Remember thatthe Target Number to determine if the spellsucceeds is not affected by modifiers for calledshots or other target modifiers, except woundeffects. It is possible to successfully cast soulblast and still miss the target.If the hex hits, damage depends on the handdrawn, as shown on Soul Blast Table on the nextpage. Soul blast does receive bonus diceaccording to hit location: one die for hits to thegizzards and two dice for head shots. Armordoes not protect against the damage from a soulblast, nor does cover. The soul blast just goesright through it.For some reason, a Dead Man’s Hand (twoblack Aces, two black 8s, and a Jack ofDiamonds) causes automatic death.",
+    handTable: {
+      effect: "Damage",
+      hands: {
+        Pair: "1d4 Wind",
+        Jacks: "2d4",
+        "Two Pair": "s3d6",
+        "Three of a Kind": "4d8",
+        Straight: "5d8",
+        Flush: "5d10",
+        "Full House": "6d10",
+        "Four of a Kind": "6d12",
+        "Straight Flush": "7d12",
+        "Royal Flush": "8d12",
+      },
+    },
+  },
+];
