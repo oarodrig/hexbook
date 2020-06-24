@@ -2,28 +2,18 @@
   padding: 0 1rem;
 }
 
-.hexDetailContainer p {
-  font: 400 16px sans-serif;
-}
-
 .hexDetailContainer h1 {
-  font: 700 24px sans-serif;
+  font: 700 24px;
   margin-top: 0;
 }
 
 p.hexDescription {
   line-height: 1.5;
+  white-space: pre-wrap;
 }
 
 .hexTable {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1rem;
-}
-
-.hexTable td,
-.hexTable th {
-  border: 1px solid #999;
-  padding: 0.5rem;
-  text-align: left;
 }

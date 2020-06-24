@@ -26,9 +26,7 @@ const HexDetail = (props) => {
       <p>
         Range: <b>{hex.range}</b>
       </p>
-      {hex.descriptionStrings.map(description => (
-        <p className={style.hexDescription}>{description}</p>
-      ))}
+      <p className={style.hexDescription}>{hex.description}</p>
       {hex.handTable && (
         <table className={style.hexTable}>
           <thead>

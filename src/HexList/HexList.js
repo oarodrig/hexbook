@@ -5,10 +5,7 @@ import style from "./HexList.module.css";
 const HexList = (props) => {
   const { hexes } = props;
 
-  const getRowView = () => {
-    console.log(hexes);
-    return hexes.map((hex) => <HexRow hex={hex} />);
-  };
+  const getRowView = () => hexes.map((hex) => <HexRow hex={hex} />);
 
   return (
     <div className={style.hexListContainer}>
