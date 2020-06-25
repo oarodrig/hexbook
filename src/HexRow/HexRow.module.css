@@ -11,6 +11,7 @@
 
 .hexName {
   font-weight: 700;
+  font-size: 18px;
 }
 
 .hexTrait {
@@ -20,6 +21,6 @@
 .hexLink {
   display: block;
   padding: 1rem;
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+  color: inherit;
+  text-decoration: inherit;
 }
