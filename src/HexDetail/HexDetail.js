@@ -37,7 +37,7 @@ const HexDetail = (props) => {
           </thead>
           <tbody>
             {Object.keys(hex.handTable.hands).map((hand) => (
-              <tr>
+              <tr key={hand}>
                 <td>{hand}</td>
                 <td>{hex.handTable.hands[hand]}</td>
               </tr>
