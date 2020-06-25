@@ -18,14 +18,14 @@ function App() {
 
   return (
     <div className="App">
-      <TopBar
-        searchValue={searchValue}
-        onSearchChange={handleSearchChange}
-        onClearSearch={clearSearch}
-      />
       <Router>
         <Switch>
           <Route exact path="/">
+            <TopBar
+              searchValue={searchValue}
+              onSearchChange={handleSearchChange}
+              onClearSearch={clearSearch}
+            />
             <HexList hexes={hexes} filter={searchValue} />
           </Route>
           <Route path="/hex/:id">
