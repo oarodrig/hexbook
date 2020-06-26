@@ -24,3 +24,57 @@
   color: inherit;
   text-decoration: inherit;
 }
+
+.badgeContainer {
+  margin-top: 0.25rem;
+}
+
+.badgeContainer > * + * {
+  margin-left: 0.25rem;
+}
+
+.badgeContainer .buff {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.badgeContainer .damage {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.badgeContainer .debuff {
+  background-color: #16a085;
+  color: white;
+}
+
+.badgeContainer .domination {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.badgeContainer .healing {
+  border: 1px solid lightgray;
+  background-color: #ecf0f1;
+  color: black;
+}
+
+.badgeContainer .illusion {
+  background-color: #3498db;
+  color: white;
+}
+
+.badgeContainer .itemCreation {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.badgeContainer .multipleTargets {
+  background-color: #2980b9;
+  color: white;
+}
+
+.badgeContainer .singleTarget {
+  background-color: #2c3e50;
+  color: white;
+}

@@ -1,4 +1,4 @@
-const hexType = {
+export const hexType = {
   domination: "Domination",
   itemCreation: "Item Creation",
   debuff: "Debuff",
