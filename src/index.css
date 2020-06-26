@@ -27,3 +27,49 @@ tr + tr {
 thead tr {
   background: #e4e4e4;
 }
+
+.App .buff-badge {
+  background-color: #2ecc70;
+  color: white;
+}
+
+.App .damage-badge {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.App .debuff-badge {
+  background-color: #16a085;
+  color: white;
+}
+
+.App .domination-badge {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.App .healing-badge {
+  border: 1px solid lightgray;
+  background-color: #ecf0f1;
+  color: black;
+}
+
+.App .illusion-badge {
+  background-color: #3498db;
+  color: white;
+}
+
+.App .item-creation-badge {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.App .multiple-targets-badge {
+  background-color: #2980b9;
+  color: white;
+}
+
+.App .single-target-badge {
+  background-color: #2c3e50;
+  color: white;
+}

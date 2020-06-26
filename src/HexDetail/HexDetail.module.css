@@ -5,6 +5,7 @@
 .hexDetailContainer h1 {
   font: 700 24px;
   margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 p.hexDescription {
@@ -16,4 +17,17 @@ p.hexDescription {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1rem;
+}
+
+.details dd {
+  margin-left: 0;
+  font-weight: 700;
+}
+
+.details dd + dt {
+  margin-top: 1rem;
+}
+
+.typeBadgeContainer > * + * {
+  margin-left: 0.25rem;
 }

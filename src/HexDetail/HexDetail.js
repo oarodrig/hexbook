@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import style from "./HexDetail.module.css";
+import getTypeBadges from "../common/typeBadgeFactory";
 
 const HexDetail = (props) => {
   let { hexes } = props;
@@ -11,21 +12,19 @@ const HexDetail = (props) => {
   return (
     <div className={style.hexDetailContainer}>
       <h1>{hex.name}</h1>
-      <p>
-        Trait: <b>{hex.trait}</b>
-      </p>
-      <p>
-        Minimum Hand: <b>{hex.hand}</b>
-      </p>
-      <p>
-        Speed: <b>{hex.speed}</b>
-      </p>
-      <p>
-        Duration: <b>{hex.duration}</b>
-      </p>
-      <p>
-        Range: <b>{hex.range}</b>
-      </p>
+      <div className={style.typeBadgeContainer}>{getTypeBadges(hex.types)}</div>
+      <dl className={style.details}>
+        <dt>Trait</dt>
+        <dd>{hex.trait}</dd>
+        <dt>Minimum Hand</dt>
+        <dd>{hex.hand}</dd>
+        <dt>Speed</dt>
+        <dd>{hex.speed}</dd>
+        <dt>Duration</dt>
+        <dd>{hex.duration}</dd>
+        <dt>Range</dt>
+        <dd>{hex.range}</dd>
+      </dl>
       <p className={style.hexDescription}>{hex.description}</p>
       {hex.handTable && (
         <table className={style.hexTable}>
