@@ -1,3 +1,15 @@
+const hexType = {
+  domination: "Domination",
+  itemCreation: "Item Creation",
+  debuff: "Debuff",
+  singleTarget: "Single Target",
+  multipleTargets: "Multiple Targets",
+  healing: "Healing",
+  illusion: "Illusion",
+  buff: "Buff",
+  damage: "Damage",
+};
+
 export default [
   {
     id: 1,
@@ -12,6 +24,7 @@ This hex allows the caster to provide another person with a magical “Ace in th
 When this person triggers the link, she rolls the huckster’s skill with the hex but substitutes her Trait dice for the huckster’s. If successful, she draws the cards indicated by the roll. Of course, this means she suffers any backlash as well. Going bust on the hex Aptitude roll and drawing any Joker, in this case, regardless of either person’s skill, causes backlash.\n
 There are a few limitations on Ace in the hole. First, the link only lasts 1 day per the huckster’s level in Ace in the hole. Second, any hexes which could only be cast on others (helpin’ hand, etc.) cannot be cast on either the original huckster or the person holding the Ace — they must target a third person. Any hex which can normally only be used on the huckster, can now be used either on the huckster or the person holding the Ace. Finally, while a hex is linked to an Ace in the hole, the huckster cannot cast that hex himself.\n
 `,
+    types: [hexType.itemCreation],
   },
   {
     id: 2,
@@ -27,6 +40,7 @@ Beast master doesn’t impart any intelligence to the animals it affects. The ca
 If the animals the huckster targets are trained or under the control of someone with the animal wranglin’ Aptitude, it’s a little tougher to manage. Make an opposed roll between the two attempting to control the varmints, the caster’s beast master skill versus the other’s animal wranglin’. Characters on horseback use their horse ridin’ instead. If the huckster loses this contest, the hex fails.\n
 The number of animals the huckster can control is based on the hand he draws.
 `,
+    types: [hexType.domination, hexType.multipleTargets],
     handTable: {
       effect: "Number",
       hands: {
@@ -56,6 +70,7 @@ This hex causes the Target Number for any single Trait or Aptitude roll to incre
 Confound only affects the next action made by the target. If the next action the target makes doesn’t involve an Aptitude or Trait roll, the hex is wasted. Additionally, if a full round elapses without the target taking an action, the hex is wasted.\n
 The increase of the Target Number is based on the hand drawn by the huckster. The minimum hand increases the TN by +2. Each hand above the minimum required adds an additional +2 to the TN.\n
 `,
+    types: [hexType.debuff, hexType.singleTarget],
   },
   {
     id: 4,
@@ -66,6 +81,7 @@ The increase of the Target Number is based on the hand drawn by the huckster. Th
     duration: "Concentration or 1 Wind/round",
     range: "5 yards/hex level",
     description: `Corporeal twist is the opposite of corporeal tweak. It lowers one of a target’s physical Traitsby one die type for each of the hands listedunder corporeal tweak. Once the die type hasdropped to a d4, the Coordination drops by 1 foreach level, down to a minimum of 1d4. A subjectcan only be affected by one corporeal twist at atime. Any further corporeal twists cast on atarget while one is still in effect automaticallyfail.`,
+    types: [hexType.debuff, hexType.singleTarget],
   },
   {
     id: 5,
@@ -79,6 +95,7 @@ The increase of the Target Number is based on the hand drawn by the huckster. Th
 The hand needed depends on the victim’s highest wound level. Note that helpin’ hand can’t heal more than 1 level of wounds at a time. The huckster can treat several wound levels by casting the hex more than once, however. Helpin’ hand also can’t restore maimed limbs. Only the divine favors of shamans and the blessed can pull off that trick.\n
 Undead, like the Harrowed, cannot be affected by this hex. To fix their wounds, the huckster must use the reanimate hex.\n
 `,
+    types: [hexType.healing, hexType.singleTarget],
     handTable: {
       effect: "Wound",
       hands: {
@@ -109,6 +126,7 @@ The effects of the hex are limited to an area equal to 200 square feet per hex l
 The illusion produced by the hex is very realistic. So much so, in fact, that anyone viewing it must first have a reason to doubt its existence—and then make a Hard (9) Cognition roll—to recognize it for false. Anyone attempting to touch an illusion realizes it to be false without having to roll. Also, since it is visual, it has absolutely no effect on the blind or creatures that do not use vision as their primary sense.\n
 The precision of the hex is limited by the hand the huckster draws. Initially, only simple objects can be reproduced, but with higher hands he can produce very intricate illusions.\n
 `,
+    types: [hexType.illusion],
     handTable: {
       effect: "Complexity",
       hands: {
@@ -137,6 +155,7 @@ The precision of the hex is limited by the hand the huckster draws. Initially, o
 The hex is only effective when cast immediately after another Trait or Aptitude roll has been made successfully. To do this, the huckster must spend his highest card, just as if he were vamoosin’. He then casts raisin’ the pot! and draws his hand. Based on the hand drawn, he increases the number of raises on the original Trait or Aptitude roll.\n
 If the huckster goes bust on his roll or draws a black Joker, not only does he suffer backlash as normal, but the original Trait or Aptitude check fails regardless of the roll.\n
 `,
+    types: [hexType.buff, hexType.singleTarget],
     handTable: {
       effect: "Raises Gained",
       hands: {
@@ -161,6 +180,7 @@ If the huckster goes bust on his roll or draws a black Joker, not only does he s
 Shadow man creates a pocket of shadow  around the huckster. It does not make him  invisible, but it does add to his sneak rolls. A  Pair adds +5 to the huckster’s roll. Better hands  add an additional +2 per level.\n
 The huckster must still attempt to move  stealthily. Nothing stands out quite like a pocket  of shadow moving across main street at high  noon! Such actions negate the bonus.\n
 `,
+    types: [hexType.buff, hexType.singleTarget],
   },
   {
     id: 9,
@@ -176,6 +196,7 @@ Roll the huckster’s soul blast skill, and use that result as both your attack 
 If the hex hits, damage depends on the hand drawn, as shown on Soul Blast Table on the next page. Soul blast does receive bonus dice according to hit location: one die for hits to the gizzards and two dice for head shots. Armor does not protect against the damage from a soul blast, nor does cover. The soul blast just goes right through it.\n
 For some reason, a Dead Man’s Hand (two black Aces, two black 8s, and a Jack of Diamonds) causes automatic death.\n
 `,
+    types: [hexType.damage, hexType.singleTarget],
     handTable: {
       effect: "Damage",
       hands: {
