@@ -43,7 +43,7 @@ const TopBar = (props) => {
           </button>
         )}
       </div>
-      <div className={style.topBarGroup}>
+      <div className={`${style.topBarGroup} ${style.hide}`}>
         <button className={style.topBarButton}>
           <FilterSvg className={style.icon} />
         </button>

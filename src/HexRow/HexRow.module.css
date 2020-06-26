@@ -11,7 +11,7 @@
 
 .hexName {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .hexTrait {
@@ -34,7 +34,7 @@
 }
 
 .badgeContainer .buff {
-  background-color: #2ecc71;
+  background-color: #2ecc70;
   color: white;
 }
 
