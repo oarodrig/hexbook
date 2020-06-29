@@ -19,9 +19,18 @@ p.hexDescription {
   margin-bottom: 1rem;
 }
 
+.details {
+  margin: 1.5rem 0;
+}
+
+.details dd,
+.details dt span {
+  margin-left: 1.75rem;
+}
+
 .details dd {
-  margin-left: 0;
   font-weight: 700;
+  font-size: 18px;
 }
 
 .details dd + dt {
@@ -30,4 +39,11 @@ p.hexDescription {
 
 .typeBadgeContainer > * + * {
   margin-left: 0.25rem;
+}
+
+.detailIcon {
+  position: absolute;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.25rem;
 }

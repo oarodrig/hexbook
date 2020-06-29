@@ -2,6 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import style from "./HexDetail.module.css";
 import getTypeBadges from "../common/typeBadgeFactory";
+import { ReactComponent as D20Icon } from "../common/svg/dice-d20-solid.svg"; //TODO Attribution
+import { ReactComponent as SpadeIcon } from "../common/svg/spade.svg"; // TODO Attribution: Icons made by <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+import { ReactComponent as RunningIcon } from "../common/svg/running-solid.svg"; //TODO Attribution
+import { ReactComponent as StopwatchIcon } from "../common/svg/stopwatch-solid.svg"; //TODO Attribution
+import { ReactComponent as BullseyeIcon } from "../common/svg/bullseye-solid.svg"; //TODO Attribution
 
 const HexDetail = (props) => {
   let { hexes } = props;
@@ -14,15 +19,30 @@ const HexDetail = (props) => {
       <h1>{hex.name}</h1>
       <div className={style.typeBadgeContainer}>{getTypeBadges(hex.types)}</div>
       <dl className={style.details}>
-        <dt>Trait</dt>
+        <dt>
+          <D20Icon className={style.detailIcon} />
+          <span>Trait</span>
+        </dt>
         <dd>{hex.trait}</dd>
-        <dt>Minimum Hand</dt>
+        <dt>
+          <SpadeIcon className={style.detailIcon} />
+          <span>Minimum Hand</span>
+        </dt>
         <dd>{hex.hand}</dd>
-        <dt>Speed</dt>
+        <dt>
+          <RunningIcon className={style.detailIcon} />
+          <span>Speed</span>
+        </dt>
         <dd>{hex.speed}</dd>
-        <dt>Duration</dt>
+        <dt>
+          <StopwatchIcon className={style.detailIcon} />
+          <span>Duration</span>
+        </dt>
         <dd>{hex.duration}</dd>
-        <dt>Range</dt>
+        <dt>
+          <BullseyeIcon className={style.detailIcon} />
+          <span>Range</span>
+        </dt>
         <dd>{hex.range}</dd>
       </dl>
       <p className={style.hexDescription}>{hex.description}</p>
