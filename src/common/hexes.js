@@ -80,7 +80,7 @@ The increase of the Target Number is based on the hand drawn by the huckster. Th
     speed: "1",
     duration: "Concentration or 1 Wind/round",
     range: "5 yards/hex level",
-    description: `Corporeal twist is the opposite of corporeal tweak. It lowers one of a target’s physical Traitsby one die type for each of the hands listedunder corporeal tweak. Once the die type hasdropped to a d4, the Coordination drops by 1 foreach level, down to a minimum of 1d4. A subjectcan only be affected by one corporeal twist at atime. Any further corporeal twists cast on atarget while one is still in effect automaticallyfail.`,
+    description: `Corporeal twist is the opposite of corporeal tweak. It lowers one of a target’s physical traits by one die type for each of the hands listed under corporeal tweak. Once the die type has dropped to a d4, the Coordination drops by 1 for each level, down to a minimum of 1d4. A subject can only be affected by one corporeal twist at a time. Any further corporeal twists cast on a target while one is still in effect automatically fail.`,
     types: [hexType.debuff, hexType.singleTarget],
   },
   {
@@ -130,16 +130,16 @@ The precision of the hex is limited by the hand the huckster draws. Initially, o
     handTable: {
       effect: "Complexity",
       hands: {
-        Ace: "Single uniform object(blank wall or moundof dirt)",
-        Pair: "Single simple object orarea (door, emptyroom, muddy pond)",
+        Ace: "Single uniform object (blank wall or mound of dirt)",
+        Pair: "Single simple object or area (door, empty room, muddy pond)",
         Jacks:
-          "Single moderately diverseobject (wagon, rifle,single dead tree)",
+          "Single moderately diverse object (wagon, rifle, single dead tree)",
         "Two Pair":
-          "Single complex object ormultiple simple objects(Gatling gun, sparselyfurnished room, singlelive tree)",
+          "Single complex object or multiple simple objects (Gatling gun, sparsely furnished room, single live tree)",
         "Three of a Kind":
-          "Multiple moderatelydiverse objects(furnished room,garden)",
-        Straight: "Multiple complex objects(complete building,train)",
-        Flush: "Extremely complexobjects (interior of agizmo)",
+          "Multiple moderately diverse objects (furnished room, garden)",
+        Straight: "Multiple complex objects (complete building, train)",
+        Flush: "Extremely complex objects (interior of a gizmo)",
       },
     },
   },
@@ -176,9 +176,9 @@ If the huckster goes bust on his roll or draws a black Joker, not only does he s
     speed: "1",
     duration: "Concentration",
     range: "self",
-    description: `This is the favored hex of serious skulkers  everywhere.\n
-Shadow man creates a pocket of shadow  around the huckster. It does not make him  invisible, but it does add to his sneak rolls. A  Pair adds +5 to the huckster’s roll. Better hands  add an additional +2 per level.\n
-The huckster must still attempt to move  stealthily. Nothing stands out quite like a pocket  of shadow moving across main street at high  noon! Such actions negate the bonus.\n
+    description: `This is the favored hex of serious skulkers everywhere.\n
+Shadow man creates a pocket of shadow around the huckster. It does not make him invisible, but it does add to his sneak rolls. A Pair adds +5 to the huckster’s roll. Better hands add an additional +2 per level.\n
+The huckster must still attempt to move stealthily. Nothing stands out quite like a pocket of shadow moving across main street at high noon! Such actions negate the bonus.\n
 `,
     types: [hexType.buff, hexType.singleTarget],
   },
@@ -202,7 +202,7 @@ For some reason, a Dead Man’s Hand (two black Aces, two black 8s, and a Jack o
       hands: {
         Pair: "1d4 Wind",
         Jacks: "2d4",
-        "Two Pair": "s3d6",
+        "Two Pair": "3d6",
         "Three of a Kind": "4d8",
         Straight: "5d8",
         Flush: "5d10",
