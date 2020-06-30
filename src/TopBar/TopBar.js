@@ -33,7 +33,7 @@ const TopBar = (props) => {
           value={searchValue}
           className={`${style.searchInput} ${style.occupyAvailableWidth}`}
           type="text"
-          placeholder="Search Hexes"
+          placeholder="Search Hexbook"
           onChange={handleSearchChange}
           ref={searchInput}
         />
