@@ -21,11 +21,12 @@ th {
 }
 
 tr + tr {
-  border-top: 1px solid #bdbdbd;
+  border-top: 1px solid #8e44ad;
 }
 
 thead tr {
-  background: #e4e4e4;
+  background: #8e44ad;
+  color: white;
 }
 
 .App .buff-badge {
