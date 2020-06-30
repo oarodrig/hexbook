@@ -10,6 +10,7 @@
 
 p.hexDescription {
   line-height: 1.5;
+  font-size: 17px;
   white-space: pre-wrap;
 }
 
@@ -25,12 +26,16 @@ p.hexDescription {
 
 .details dd,
 .details dt span {
-  margin-left: 1.75rem;
+  margin-left: 0rem;
+}
+
+.details dt {
+  font-size: 18px;
 }
 
 .details dd {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .details dd + dt {
@@ -42,8 +47,7 @@ p.hexDescription {
 }
 
 .detailIcon {
-  position: absolute;
-  height: 1.25rem;
-  width: 1.25rem;
-  margin-right: 0.25rem;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
 }
