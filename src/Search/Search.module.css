@@ -1,0 +1,36 @@
+.searchContainer {
+  position: relative;
+}
+
+.searchIcon {
+  width: 1.25rem;
+  color: grey;
+  position: absolute;
+  top: 7px;
+  left: 0.5rem;
+  pointer-events: none;
+}
+
+.searchInput {
+  box-sizing: border-box;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  padding-left: 2rem;
+  height: 2rem;
+  width: 100%;
+}
+
+.clearButton {
+  border: none;
+  background: none;
+  height: 100%;
+  width: 2.5rem;
+  position: absolute;
+  right: 0;
+}
+
+.clearIcon {
+  color: grey;
+  width: 1.25rem;
+  height: 2rem;
+}
