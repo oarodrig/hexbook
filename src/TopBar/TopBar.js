@@ -8,7 +8,7 @@ const TopBar = (props) => {
   return (
     <>
       <header className={style.header}>
-        <a className={style.title}>Hexbook</a>
+        <h1>Hexbook</h1>
       </header>
       <Search
         className={style.searchBar}
