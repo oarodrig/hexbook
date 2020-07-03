@@ -1,4 +1,7 @@
 .row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   list-style: none;
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -31,4 +34,24 @@
 
 .badgeContainer > * + * {
   margin-left: 0.25rem;
+}
+
+.favoriteButton {
+  width: 20%;
+  max-width: 5.5rem;
+  background: none;
+  border: none;
+  border-left: 1px solid lightgrey;
+}
+
+.favoriteIcon {
+  padding: 1rem;
+}
+
+.favoriteSelected {
+  color: gold;
+}
+
+.favoriteUnselected {
+  color: lightgrey;
 }
