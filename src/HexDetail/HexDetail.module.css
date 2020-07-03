@@ -17,6 +17,7 @@
 .backIcon {
   height: 1.25rem;
   width: 1.25rem;
+  color: #202020;
 }
 
 .title {
@@ -79,6 +80,8 @@ p.hexDescription {
 }
 
 .detailIcon {
+  color: #202020;
+  fill: #202020;
   height: 1rem;
   width: 1rem;
   margin-right: 0.5rem;
