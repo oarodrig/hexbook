@@ -28,10 +28,10 @@ const HexDetail = (props) => {
         <button className={`icon-button ${style.backButton}`}>
           <BackIcon className={style.backIcon} onClick={navigateHome} />
         </button>
-        <h1 className={style.title}>Hexbook</h1>
+        <h2 className={style.title}>Hexbook</h2>
       </header>
+      <h1 className={style.hexName}>{hex.name}</h1>
       <div className={style.hexDetailContainer}>
-        <h1>{hex.name}</h1>
         <div className={style.typeBadgeContainer}>
           {getTypeBadges(hex.types)}
         </div>
