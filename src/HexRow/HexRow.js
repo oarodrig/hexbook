@@ -11,6 +11,7 @@ const HexRow = (props) => {
     favorites = [],
     onFavorite = () => {},
     onUnfavorite = () => {},
+    condensed = false,
   } = props;
 
   const isFavorite = favorites.includes(hex.id);
@@ -24,10 +25,15 @@ const HexRow = (props) => {
   };
 
   return (
-    <li key={hex.id} className={style.row}>
+    <li
+      key={hex.id}
+      className={`${style.row} ${condensed ? style.condensed : ""}`}
+    >
       <Link to={`hex/${hex.id}`} className={style.hexLink}>
         <div className={style.hexName}>{hex.name}</div>
-        <div className={style.badgeContainer}>{getTypeBadges(hex.types)}</div>
+        {!condensed && (
+          <div className={style.badgeContainer}>{getTypeBadges(hex.types)}</div>
+        )}
       </Link>
       <button className={style.favoriteButton} onClick={toggleFavorite}>
         {isFavorite ? (

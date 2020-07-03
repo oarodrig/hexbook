@@ -10,12 +10,14 @@ const HexList = (props) => {
       .filter((hex) =>
         filter ? hex.name.toLowerCase().includes(filter.toLowerCase()) : true
       )
-      .map(getRowFromHex);
+      .map((hex) => getRowFromHex(hex, false));
 
   const getFavorites = () =>
-    hexes.filter((hex) => favorites.includes(hex.id)).map(getRowFromHex);
+    hexes
+      .filter((hex) => favorites.includes(hex.id))
+      .map((hex) => getRowFromHex(hex, true));
 
-  const getRowFromHex = (hex) => {
+  const getRowFromHex = (hex, isFavorite = false) => {
     return (
       <HexRow
         hex={hex}
@@ -23,6 +25,7 @@ const HexList = (props) => {
         favorites={favorites}
         onFavorite={onFavorite}
         onUnfavorite={onUnfavorite}
+        condensed={isFavorite}
       />
     );
   };

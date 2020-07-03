@@ -12,9 +12,18 @@
   margin-top: 0.5rem;
 }
 
+.condensed .row + .row {
+  margin-top: 0.25rem;
+}
+
 .hexName {
   font-weight: 700;
   font-size: 20px;
+}
+
+.condensed .hexName {
+  font-weight: 400;
+  font-size: 16;
 }
 
 .hexTrait {
@@ -26,6 +35,10 @@
   padding: 1rem;
   color: inherit;
   text-decoration: inherit;
+}
+
+.condensed .hexLink {
+  padding: 0.5rem;
 }
 
 .badgeContainer {
@@ -45,7 +58,13 @@
 }
 
 .favoriteIcon {
-  padding: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.condensed .favoriteIcon {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .favoriteSelected {
