@@ -26,11 +26,11 @@ th {
 }
 
 tr + tr {
-  border-top: 1px solid #8e44ad;
+  border-top: 1px solid #2c3e50;
 }
 
 thead tr {
-  background: #8e44ad;
+  background: #2c3e50;
   color: white;
 }
 
