@@ -6,7 +6,7 @@
   width: 1.25rem;
   color: grey;
   position: absolute;
-  top: 7px;
+  top: 0.75rem;
   left: 0.5rem;
   pointer-events: none;
 }
@@ -16,7 +16,7 @@
   border: 1px solid lightgrey;
   border-radius: 6px;
   padding-left: 2rem;
-  height: 2rem;
+  height: 2.75rem;
   width: 100%;
 }
 
