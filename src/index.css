@@ -2,6 +2,7 @@
 
 button {
   padding: 0;
+  cursor: pointer;
 }
 
 input,
