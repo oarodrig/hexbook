@@ -2,6 +2,26 @@
   padding: 1rem;
 }
 
+.topBar {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.backButton {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.backIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.title {
+  display: inline;
+  margin: 0;
+}
+
 .hexDetailContainer h1 {
   font: 700 24px;
   margin-top: 0;

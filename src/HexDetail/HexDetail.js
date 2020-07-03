@@ -7,64 +7,82 @@ import { ReactComponent as SpadeIcon } from "../common/svg/spade.svg"; // TODO A
 import { ReactComponent as RunningIcon } from "../common/svg/running-solid.svg"; //TODO Attribution
 import { ReactComponent as StopwatchIcon } from "../common/svg/stopwatch-solid.svg"; //TODO Attribution
 import { ReactComponent as BullseyeIcon } from "../common/svg/bullseye-solid.svg"; //TODO Attribution
+import { ReactComponent as BackIcon } from "../common/svg/chevron-circle-left-solid.svg"; //TODO Attribution
+import { useHistory } from "react-router-dom";
 
 const HexDetail = (props) => {
+  const history = useHistory();
+
   let { hexes } = props;
   let id = parseInt(useParams().id);
 
   const hex = hexes.find((h) => h.id === id);
 
+  const navigateHome = () => {
+    history.push("/");
+  };
+
   return (
-    <div className={style.hexDetailContainer}>
-      <h1>{hex.name}</h1>
-      <div className={style.typeBadgeContainer}>{getTypeBadges(hex.types)}</div>
-      <dl className={style.details}>
-        <dt>
-          <D20Icon className={style.detailIcon} />
-          <span>Trait</span>
-        </dt>
-        <dd>{hex.trait}</dd>
-        <dt>
-          <SpadeIcon className={style.detailIcon} />
-          <span>Minimum Hand</span>
-        </dt>
-        <dd>{hex.hand}</dd>
-        <dt>
-          <RunningIcon className={style.detailIcon} />
-          <span>Speed</span>
-        </dt>
-        <dd>{hex.speed}</dd>
-        <dt>
-          <StopwatchIcon className={style.detailIcon} />
-          <span>Duration</span>
-        </dt>
-        <dd>{hex.duration}</dd>
-        <dt>
-          <BullseyeIcon className={style.detailIcon} />
-          <span>Range</span>
-        </dt>
-        <dd>{hex.range}</dd>
-      </dl>
-      <p className={style.hexDescription}>{hex.description}</p>
-      {hex.handTable && (
-        <table className={style.hexTable}>
-          <thead>
-            <tr>
-              <th>Hand</th>
-              <th>{hex.handTable.effect}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {Object.keys(hex.handTable.hands).map((hand) => (
-              <tr key={hand}>
-                <td>{hand}</td>
-                <td>{hex.handTable.hands[hand]}</td>
+    <>
+      <header className={style.topBar}>
+        <button className={`icon-button ${style.backButton}`}>
+          <BackIcon className={style.backIcon} onClick={navigateHome} />
+        </button>
+        <h1 className={style.title}>Hexbook</h1>
+      </header>
+      <div className={style.hexDetailContainer}>
+        <h1>{hex.name}</h1>
+        <div className={style.typeBadgeContainer}>
+          {getTypeBadges(hex.types)}
+        </div>
+        <dl className={style.details}>
+          <dt>
+            <D20Icon className={style.detailIcon} />
+            <span>Trait</span>
+          </dt>
+          <dd>{hex.trait}</dd>
+          <dt>
+            <SpadeIcon className={style.detailIcon} />
+            <span>Minimum Hand</span>
+          </dt>
+          <dd>{hex.hand}</dd>
+          <dt>
+            <RunningIcon className={style.detailIcon} />
+            <span>Speed</span>
+          </dt>
+          <dd>{hex.speed}</dd>
+          <dt>
+            <StopwatchIcon className={style.detailIcon} />
+            <span>Duration</span>
+          </dt>
+          <dd>{hex.duration}</dd>
+          <dt>
+            <BullseyeIcon className={style.detailIcon} />
+            <span>Range</span>
+          </dt>
+          <dd>{hex.range}</dd>
+        </dl>
+        <p className={style.hexDescription}>{hex.description}</p>
+        {hex.handTable && (
+          <table className={style.hexTable}>
+            <thead>
+              <tr>
+                <th>Hand</th>
+                <th>{hex.handTable.effect}</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </div>
+            </thead>
+            <tbody>
+              {Object.keys(hex.handTable.hands).map((hand) => (
+                <tr key={hand}>
+                  <td>{hand}</td>
+                  <td>{hex.handTable.hands[hand]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
+    </>
   );
 };
 
