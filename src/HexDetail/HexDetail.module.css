@@ -5,7 +5,7 @@
 .topBar {
   display: flex;
   align-items: center;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .backButton {
@@ -26,6 +26,8 @@
 }
 
 .hexName {
+  position: sticky;
+  top: 0;
   margin: 0;
   padding: 1rem;
   background: #2c3e50;
