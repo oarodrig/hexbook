@@ -31,6 +31,7 @@
 }
 
 .hexLink {
+  flex: 1;
   display: block;
   padding: 1rem;
   color: inherit;
