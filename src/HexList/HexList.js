@@ -19,11 +19,6 @@ const HexList = (props) => {
       )
       .map((hex) => getRowFromHex(hex, false));
 
-  const getFavorites = () =>
-    hexes
-      .filter((hex) => favorites.includes(hex.id))
-      .map((hex) => getRowFromHex(hex, true));
-
   const getRowFromHex = (hex, isFavorite = false) => {
     return (
       <HexRow
