@@ -39,14 +39,6 @@ const HexList = (props) => {
 
   return (
     <div className={className || ""}>
-      {!!favorites.length && (
-        <>
-          <h3>Favorites</h3>
-          <ul className={`${style.hexList} ${style.favoritesContainer}`}>
-            {getFavorites()}
-          </ul>
-        </>
-      )}
       <ul className={style.hexList}>{getRowView()}</ul>
     </div>
   );
