@@ -29,7 +29,10 @@ const HexRow = (props) => {
       key={hex.id}
       className={`${style.row} ${condensed ? style.condensed : ""}`}
     >
-      <Link to={`hex/${hex.id}`} className={style.hexLink}>
+      <Link
+        to={{ pathname: `hex/${hex.id}`, state: { fromList: true } }}
+        className={style.hexLink}
+      >
         <div className={style.hexName}>{hex.name}</div>
         {!condensed && (
           <div className={style.badgeContainer}>{getTypeBadges(hex.types)}</div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import style from "./HexDetail.module.css";
 import getTypeBadges from "../common/typeBadgeFactory";
@@ -11,16 +11,24 @@ import { ReactComponent as BackIcon } from "../common/svg/chevron-circle-left-so
 import { useHistory } from "react-router-dom";
 
 const HexDetail = (props) => {
+  let { hexes } = props;
+
+  useEffect(() => {
+    window.scrollTo({ left: 0, top: 0 });
+  }, []);
+
   const history = useHistory();
 
-  let { hexes } = props;
-  let id = parseInt(useParams().id);
-
-  const hex = hexes.find((h) => h.id === id);
-
   const navigateHome = () => {
-    history.push("/");
+    if (history?.location?.state?.fromList) {
+      history.goBack();
+    } else {
+      history.push("/");
+    }
   };
+
+  let id = parseInt(useParams().id);
+  const hex = hexes.find((h) => h.id === id);
 
   return (
     <>
