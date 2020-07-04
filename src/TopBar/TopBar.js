@@ -6,7 +6,7 @@ const TopBar = (props) => {
   const { searchValue, onSearchChange, onClearSearch } = props;
 
   return (
-    <>
+    <div className={style.topBarContainer}>
       <header className={style.title}>Hexbook</header>
       <Search
         className={style.searchBar}
@@ -14,7 +14,7 @@ const TopBar = (props) => {
         onSearchChange={onSearchChange}
         onClearSearch={onClearSearch}
       />
-    </>
+    </div>
   );
 };
 

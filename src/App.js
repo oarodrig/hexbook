@@ -4,6 +4,7 @@ import TopBar from "./TopBar/TopBar";
 import HexList from "./HexList/HexList";
 import hexes from "./common/hexes";
 import HexDetail from "./HexDetail/HexDetail";
+import style from "./App.module.css";
 
 function App() {
   const [searchValue, setSearchValue] = useState("");
@@ -38,18 +39,21 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <TopBar
-              searchValue={searchValue}
-              onSearchChange={handleSearchChange}
-              onClearSearch={clearSearch}
-            />
-            <HexList
-              hexes={hexes}
-              favorites={favorites}
-              filter={searchValue}
-              onFavorite={handleFavorite}
-              onUnfavorite={handleUnfavorite}
-            />
+            <div className={style.listViewScreen}>
+              <TopBar
+                searchValue={searchValue}
+                onSearchChange={handleSearchChange}
+                onClearSearch={clearSearch}
+              />
+              <HexList
+                className={style.hexList}
+                hexes={hexes}
+                favorites={favorites}
+                filter={searchValue}
+                onFavorite={handleFavorite}
+                onUnfavorite={handleUnfavorite}
+              />
+            </div>
           </Route>
           <Route path="/hex/:id">
             <HexDetail hexes={hexes} />

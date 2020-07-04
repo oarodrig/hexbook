@@ -1,0 +1,9 @@
+.hexList {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+}
+
+.listViewScreen {
+  background-color: #2c3e50;
+}

@@ -3,7 +3,14 @@ import HexRow from "../HexRow/HexRow";
 import style from "./HexList.module.css";
 
 const HexList = (props) => {
-  const { hexes, favorites, filter, onFavorite, onUnfavorite } = props;
+  const {
+    hexes,
+    favorites,
+    filter,
+    onFavorite,
+    onUnfavorite,
+    className,
+  } = props;
 
   const getRowView = () =>
     hexes
@@ -31,7 +38,7 @@ const HexList = (props) => {
   };
 
   return (
-    <div className={style.hexListContainer}>
+    <div className={className || ""}>
       {!!favorites.length && (
         <>
           <h3>Favorites</h3>

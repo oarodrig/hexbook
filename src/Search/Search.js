@@ -21,21 +21,23 @@ const Search = (props) => {
   };
 
   return (
-    <div className={`${style.searchContainer} ${className || ""}`}>
-      <MagnifyingGlassIcon className={style.searchIcon} />
-      <input
-        value={searchValue}
-        type="text"
-        className={style.searchInput}
-        placeholder="Search Hexbook"
-        onChange={handleSearchChange}
-        ref={searchInput}
-      />
-      {searchValue && (
-        <button className={style.clearButton} onClick={handleClearClick}>
-          <ClearSvg className={`${style.clearIcon}`} />
-        </button>
-      )}
+    <div className={className || ""}>
+      <div className={`${style.searchContainer}`}>
+        <MagnifyingGlassIcon className={style.searchIcon} />
+        <input
+          value={searchValue}
+          type="text"
+          className={style.searchInput}
+          placeholder="Search Hexbook"
+          onChange={handleSearchChange}
+          ref={searchInput}
+        />
+        {searchValue && (
+          <button className={style.clearButton} onClick={handleClearClick}>
+            <ClearSvg className={`${style.clearIcon}`} />
+          </button>
+        )}
+      </div>
     </div>
   );
 };
