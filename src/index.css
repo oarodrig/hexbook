@@ -83,7 +83,7 @@ h6 {
 .App .healing-badge {
   border: 1px solid lightgray;
   background-color: #bdc3c7;
-  color: black;
+  color: #202020;
 }
 
 .App .illusion-badge {
@@ -93,7 +93,7 @@ h6 {
 
 .App .item-creation-badge {
   background-color: #f1c40f;
-  color: black;
+  color: #202020;
 }
 
 .App .multiple-targets-badge {
@@ -104,6 +104,11 @@ h6 {
 .App .single-target-badge {
   background-color: #2c3e50;
   color: white;
+}
+
+.App .divination-badge {
+  background-color: #1abc9c;
+  color: #202020;
 }
 
 .icon-button {

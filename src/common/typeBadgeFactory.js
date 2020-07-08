@@ -31,6 +31,9 @@ const getBadgeClass = (type) => {
     case hexType.singleTarget: {
       return "single-target-badge";
     }
+    case hexType.divination: {
+      return "divination-badge";
+    }
     default: {
       return "";
     }

@@ -1,5 +1,6 @@
 export const hexType = {
   domination: "Domination",
+  divination: "Divination",
   itemCreation: "Item Creation",
   debuff: "Debuff",
   singleTarget: "Single Target",
@@ -28,6 +29,20 @@ There are a few limitations on Ace in the hole. First, the link only lasts 1 day
   },
   {
     id: 2,
+    name: "Achilles' Heel",
+    trait: "Cognition",
+    hand: "Two Pairs",
+    speed: "1",
+    duration: "Instant",
+    range: "1 yard/hex level",
+    description: `Often is the time when a posse finds itself confronted with an abomination they’re just not quite sure how to defeat. Not surprisingly, quite a few of these posses get eaten by that same monster. A huckster with the hex Achilles’ heelcan sometimes gain a supernatural glimpse into the weak spot of a seemingly invincible foe.\n
+    For this hex to be effective, the huckster must be within range of the target at the time he casts it - not always a good place to be. If the hex is successful, the hexslinger has a short vision or feeling which reveals something about the target’s weakness - if it has one! The better the huckster’s hand, the better the information she gets about the target’s vulnerability.\n
+    Achilles’ heel is only effective against animate targets and is normally only useful against supernatural beings, since regular folks usually have only minor weaknesses in comparison. However, if cast on a normal person, this hex reveals any Hindrances worth 4 or more points that the target may have.
+`,
+    types: [hexType.divination, hexType.singleTarget],
+  },
+  {
+    id: 3,
     name: "Beast Master",
     trait: "Smarts",
     hand: "Pair",
@@ -58,7 +73,7 @@ The number of animals the huckster can control is based on the hand he draws.
     },
   },
   {
-    id: 3,
+    id: 4,
     name: "Confound",
     trait: "Smarts",
     hand: "Ace",
@@ -73,7 +88,7 @@ The increase of the Target Number is based on the hand drawn by the huckster. Th
     types: [hexType.debuff, hexType.singleTarget],
   },
   {
-    id: 4,
+    id: 5,
     name: "Corporeal Twist",
     trait: "Smarts",
     hand: "Pair",
@@ -84,7 +99,7 @@ The increase of the Target Number is based on the hand drawn by the huckster. Th
     types: [hexType.debuff, hexType.singleTarget],
   },
   {
-    id: 5,
+    id: 6,
     name: "Helpin' Hand",
     trait: "Smarts",
     hand: "Ace",
@@ -113,7 +128,7 @@ Undead, like the Harrowed, cannot be affected by this hex. To fix their wounds, 
     },
   },
   {
-    id: 6,
+    id: 7,
     name: "Mirage",
     trait: "Smarts",
     hand: "Pair",
@@ -144,7 +159,7 @@ The precision of the hex is limited by the hand the huckster draws. Initially, o
     },
   },
   {
-    id: 7,
+    id: 8,
     name: "Raisin' the Pot",
     trait: "Smarts",
     hand: "Pair",
@@ -169,7 +184,7 @@ If the huckster goes bust on his roll or draws a black Joker, not only does he s
     },
   },
   {
-    id: 8,
+    id: 9,
     name: "Shadow Man",
     trait: "Smarts",
     hand: "Pair",
@@ -183,7 +198,7 @@ The huckster must still attempt to move stealthily. Nothing stands out quite lik
     types: [hexType.buff, hexType.singleTarget],
   },
   {
-    id: 9,
+    id: 10,
     name: "Soul Blast",
     trait: "Spirit",
     hand: "Ace",
