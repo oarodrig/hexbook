@@ -1,0 +1,41 @@
+.favorites {
+  background-color: #ecf0f1;
+}
+
+.title {
+  margin: 0 0 0.5rem 0;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderIcon {
+  height: 5rem;
+  width: 5em;
+  color: #bdc3c7;
+}
+
+.placeholderTitle {
+  margin-top: 1rem;
+}
+
+.placeholderDescription {
+  text-align: center;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.closeButtonIcon {
+  color: #bdc3c7;
+}
+
+.closeButton {
+  width: 2rem;
+}

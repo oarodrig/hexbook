@@ -41,9 +41,13 @@ function App() {
           <Route exact path="/">
             <div className={style.listViewScreen}>
               <TopBar
+                hexes={hexes}
+                onFavorite={handleFavorite}
+                onUnfavorite={handleUnfavorite}
                 searchValue={searchValue}
                 onSearchChange={handleSearchChange}
                 onClearSearch={clearSearch}
+                favorites={favorites}
               />
               <HexList
                 className={style.hexList}
