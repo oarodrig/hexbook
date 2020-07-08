@@ -1,6 +1,7 @@
 .hexDetailContainer {
   padding: 1rem;
   background-color: #ecf0f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
 }
 
 .topBar {
