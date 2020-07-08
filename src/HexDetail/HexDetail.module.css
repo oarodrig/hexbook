@@ -1,17 +1,18 @@
 .hexDetailContainer {
   padding: 1rem;
+  background-color: #ecf0f1;
 }
 
 .topBar {
   display: flex;
   align-items: center;
-  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: #ecf0f1;
 }
 
 .backButton {
   height: 2.5rem;
   width: 2.5rem;
-  margin-right: ;
 }
 
 .backIcon {

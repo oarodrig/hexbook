@@ -33,7 +33,7 @@ const HexList = (props) => {
   };
 
   return (
-    <div className={className || ""}>
+    <div className={`${className || ""} ${style.hexListContainer}`}>
       <ul className={style.hexList}>{getRowView()}</ul>
     </div>
   );

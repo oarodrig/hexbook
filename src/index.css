@@ -1,5 +1,15 @@
 @import-normalize;
 
+body {
+  height: 1vh;
+  background-color: #bdc3c7;
+}
+
+.root {
+  height: 100%;
+  background-color: #bdc3c7;
+}
+
 button {
   padding: 0;
   cursor: pointer;
