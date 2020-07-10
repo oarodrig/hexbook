@@ -14,6 +14,7 @@ const HexList = (props) => {
 
   const getRowView = () =>
     hexes
+      .sort((hexA, hexB) => hexA.name.localeCompare(hexB.name))
       .filter((hex) =>
         filter ? hex.name.toLowerCase().includes(filter.toLowerCase()) : true
       )

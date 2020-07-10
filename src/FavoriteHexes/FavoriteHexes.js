@@ -13,6 +13,7 @@ const FavoriteHexes = ({
 }) => {
   const getHexListItems = () =>
     hexes
+      .sort((hexA, hexB) => hexA.name.localeCompare(hexB.name))
       .filter((hex) => favorites.includes(hex.id))
       .map((hex) => getRowFromHex(hex, false));
 
