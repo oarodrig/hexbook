@@ -34,6 +34,12 @@ const getBadgeClass = (type) => {
     case hexType.divination: {
       return "divination-badge";
     }
+    case hexType.utility: {
+      return "utility-badge";
+    }
+    case hexType.defense: {
+      return "defense-badge";
+    }
     default: {
       return "";
     }

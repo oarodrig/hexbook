@@ -9,7 +9,37 @@ export const hexType = {
   illusion: "Illusion",
   buff: "Buff",
   damage: "Damage",
+  utility: "Utility",
+  defense: "Defense",
 };
+
+// Hex template
+// {
+//   id: ,
+//   name: ,
+//   trait: ,
+//   hand: ,
+//   speed: ,
+//   duration: ,
+//   range: ,
+//   description: ,
+//   types: [],
+//   handTable: {
+//     effect: ,
+//     hands: {
+//       Pair: ,
+//       Jacks: ,
+//       "Two Pair": ,
+//       "Three of a Kind": ,
+//       Straight: ,
+//       Flush: ,
+//       "Full House": ,
+//       "Four of a Kind": ,
+//       "Straight Flush": ,
+//       "Royal Flush":
+//     }
+//   },
+// }
 
 export default [
   {
@@ -23,8 +53,7 @@ export default [
     description: `Hucksters don’t usually play well with others. When they do, the effects can be spectacular.\n
 This hex allows the caster to provide another person with a magical “Ace in the hole.” The huckster links a hex he can cast to a small focus of some sort, usually a playing card, which can then be given to another. The holder of this focus can cast the hex just as if she were the huckster.\n
 When this person triggers the link, she rolls the huckster’s skill with the hex but substitutes her Trait dice for the huckster’s. If successful, she draws the cards indicated by the roll. Of course, this means she suffers any backlash as well. Going bust on the hex Aptitude roll and drawing any Joker, in this case, regardless of either person’s skill, causes backlash.\n
-There are a few limitations on Ace in the hole. First, the link only lasts 1 day per the huckster’s level in Ace in the hole. Second, any hexes which could only be cast on others (helpin’ hand, etc.) cannot be cast on either the original huckster or the person holding the Ace — they must target a third person. Any hex which can normally only be used on the huckster, can now be used either on the huckster or the person holding the Ace. Finally, while a hex is linked to an Ace in the hole, the huckster cannot cast that hex himself.\n
-`,
+There are a few limitations on Ace in the hole. First, the link only lasts 1 day per the huckster’s level in Ace in the hole. Second, any hexes which could only be cast on others (helpin’ hand, etc.) cannot be cast on either the original huckster or the person holding the Ace — they must target a third person. Any hex which can normally only be used on the huckster, can now be used either on the huckster or the person holding the Ace. Finally, while a hex is linked to an Ace in the hole, the huckster cannot cast that hex himself.\n`,
     types: [hexType.itemCreation],
   },
   {
@@ -37,8 +66,7 @@ There are a few limitations on Ace in the hole. First, the link only lasts 1 day
     range: "1 yard/hex level",
     description: `Often is the time when a posse finds itself confronted with an abomination they’re just not quite sure how to defeat. Not surprisingly, quite a few of these posses get eaten by that same monster. A huckster with the hex Achilles’ heelcan sometimes gain a supernatural glimpse into the weak spot of a seemingly invincible foe.\n
     For this hex to be effective, the huckster must be within range of the target at the time he casts it - not always a good place to be. If the hex is successful, the hexslinger has a short vision or feeling which reveals something about the target’s weakness - if it has one! The better the huckster’s hand, the better the information she gets about the target’s vulnerability.\n
-    Achilles’ heel is only effective against animate targets and is normally only useful against supernatural beings, since regular folks usually have only minor weaknesses in comparison. However, if cast on a normal person, this hex reveals any Hindrances worth 4 or more points that the target may have.
-`,
+    Achilles’ heel is only effective against animate targets and is normally only useful against supernatural beings, since regular folks usually have only minor weaknesses in comparison. However, if cast on a normal person, this hex reveals any Hindrances worth 4 or more points that the target may have.`,
     types: [hexType.divination, hexType.singleTarget],
   },
   {
@@ -53,8 +81,7 @@ There are a few limitations on Ace in the hole. First, the link only lasts 1 day
 Unlike call o’ the wild, this hex doesn’t give the huckster much choice over what animals he gets. He’s limited to what’s on hand when he casts the hex. The affected animals do his bidding as long as he continues to concentrate. As soon as he stops, however, the animals revert to their normal actions.\n
 Beast master doesn’t impart any intelligence to the animals it affects. The caster shouldn’t expect a squirrel to read a note over the bad guy’s shoulder. Controlled animals must still make guts checks when faced with supernatural opponents.\n
 If the animals the huckster targets are trained or under the control of someone with the animal wranglin’ Aptitude, it’s a little tougher to manage. Make an opposed roll between the two attempting to control the varmints, the caster’s beast master skill versus the other’s animal wranglin’. Characters on horseback use their horse ridin’ instead. If the huckster loses this contest, the hex fails.\n
-The number of animals the huckster can control is based on the hand he draws.
-`,
+The number of animals the huckster can control is based on the hand he draws.`,
     types: [hexType.domination, hexType.multipleTargets],
     handTable: {
       effect: "Number",
@@ -83,8 +110,7 @@ The number of animals the huckster can control is based on the hand he draws.
     description: `A huckster using confound cannot only make something harder than it looked, he can make it harder than it is!\n
 This hex causes the Target Number for any single Trait or Aptitude roll to increase in difficulty. Raises for this roll are figured from the new adjusted TN. It is effective against even magical Aptitudes like hexes, rituals, and even a blessed’s faith rolls.\n
 Confound only affects the next action made by the target. If the next action the target makes doesn’t involve an Aptitude or Trait roll, the hex is wasted. Additionally, if a full round elapses without the target taking an action, the hex is wasted.\n
-The increase of the Target Number is based on the hand drawn by the huckster. The minimum hand increases the TN by +2. Each hand above the minimum required adds an additional +2 to the TN.\n
-`,
+The increase of the Target Number is based on the hand drawn by the huckster. The minimum hand increases the TN by +2. Each hand above the minimum required adds an additional +2 to the TN.\n`,
     types: [hexType.debuff, hexType.singleTarget],
   },
   {
@@ -108,8 +134,7 @@ The increase of the Target Number is based on the hand drawn by the huckster. Th
     range: "1 yard",
     description: `Helpin’ hand allows a huckster to heal a suffering companion’s wounds (not his own). Each successful casting reduces the wounds in all areas by 1 level each. During this time the caster can take no actions other than sitting near the patient and waiting (a good time to brush up on one’s solitaire).\n
 The hand needed depends on the victim’s highest wound level. Note that helpin’ hand can’t heal more than 1 level of wounds at a time. The huckster can treat several wound levels by casting the hex more than once, however. Helpin’ hand also can’t restore maimed limbs. Only the divine favors of shamans and the blessed can pull off that trick.\n
-Undead, like the Harrowed, cannot be affected by this hex. To fix their wounds, the huckster must use the reanimate hex.\n
-`,
+Undead, like the Harrowed, cannot be affected by this hex. To fix their wounds, the huckster must use the reanimate hex.\n`,
     types: [hexType.healing, hexType.singleTarget],
     handTable: {
       effect: "Wound",
@@ -139,8 +164,7 @@ Undead, like the Harrowed, cannot be affected by this hex. To fix their wounds, 
 This hex allows a huckster to create an illusion of a place or inanimate object. For the purposes of this hex, normal plants such as grass and trees are considered inanimate.\n
 The effects of the hex are limited to an area equal to 200 square feet per hex level. This is the equivalent of a 20’ x 10’ rectangle, although the huckster can modify this area into any shape, as long it does not exceed the limit. If needed, the huckster can move the illusion as appropriate within the range of the hex. Note, though, that any illusionary objects created with this hex must be three dimensional. Your huckster can’t extend the size of his illusion by making a locomotive which appears normal from the side but which is only 1” wide.\n
 The illusion produced by the hex is very realistic. So much so, in fact, that anyone viewing it must first have a reason to doubt its existence—and then make a Hard (9) Cognition roll—to recognize it for false. Anyone attempting to touch an illusion realizes it to be false without having to roll. Also, since it is visual, it has absolutely no effect on the blind or creatures that do not use vision as their primary sense.\n
-The precision of the hex is limited by the hand the huckster draws. Initially, only simple objects can be reproduced, but with higher hands he can produce very intricate illusions.\n
-`,
+The precision of the hex is limited by the hand the huckster draws. Initially, only simple objects can be reproduced, but with higher hands he can produce very intricate illusions.\n`,
     types: [hexType.illusion],
     handTable: {
       effect: "Complexity",
@@ -168,8 +192,7 @@ The precision of the hex is limited by the hand the huckster draws. Initially, o
     range: "5 yards/hex level",
     description: `By raising the pot, a huckster can make a good thing better. The huckster forces the manitou to give himself or a companion a supernatural “leg up.”\n
 The hex is only effective when cast immediately after another Trait or Aptitude roll has been made successfully. To do this, the huckster must spend his highest card, just as if he were vamoosin’. He then casts raisin’ the pot! and draws his hand. Based on the hand drawn, he increases the number of raises on the original Trait or Aptitude roll.\n
-If the huckster goes bust on his roll or draws a black Joker, not only does he suffer backlash as normal, but the original Trait or Aptitude check fails regardless of the roll.\n
-`,
+If the huckster goes bust on his roll or draws a black Joker, not only does he suffer backlash as normal, but the original Trait or Aptitude check fails regardless of the roll.\n`,
     types: [hexType.buff, hexType.singleTarget],
     handTable: {
       effect: "Raises Gained",
@@ -193,8 +216,7 @@ If the huckster goes bust on his roll or draws a black Joker, not only does he s
     range: "self",
     description: `This is the favored hex of serious skulkers everywhere.\n
 Shadow man creates a pocket of shadow around the huckster. It does not make him invisible, but it does add to his sneak rolls. A Pair adds +5 to the huckster’s roll. Better hands add an additional +2 per level.\n
-The huckster must still attempt to move stealthily. Nothing stands out quite like a pocket of shadow moving across main street at high noon! Such actions negate the bonus.\n
-`,
+The huckster must still attempt to move stealthily. Nothing stands out quite like a pocket of shadow moving across main street at high noon! Such actions negate the bonus.\n`,
     types: [hexType.buff, hexType.singleTarget],
   },
   {
@@ -209,8 +231,7 @@ The huckster must still attempt to move stealthily. Nothing stands out quite lik
 Just because the hex comes off doesn’t mean it hits its target. Determine the Target Number like a gunshot, starting with a Fair (5) TN. Ignore range, but figure other penalties such as cover, size, etc. The caster can even attempt a called shot if he wishes.\n
 Roll the huckster’s soul blast skill, and use that result as both your attack roll and to figure how many cards you get to draw. Remember that the Target Number to determine if the spell succeeds is not affected by modifiers for called shots or other target modifiers, except wound effects. It is possible to successfully cast soul blast and still miss the target.\n
 If the hex hits, damage depends on the hand drawn, as shown on Soul Blast Table on the next page. Soul blast does receive bonus dice according to hit location: one die for hits to the gizzards and two dice for head shots. Armor does not protect against the damage from a soul blast, nor does cover. The soul blast just goes right through it.\n
-For some reason, a Dead Man’s Hand (two black Aces, two black 8s, and a Jack of Diamonds) causes automatic death.\n
-`,
+For some reason, a Dead Man’s Hand (two black Aces, two black 8s, and a Jack of Diamonds) causes automatic death.\n`,
     types: [hexType.damage, hexType.singleTarget],
     handTable: {
       effect: "Damage",
@@ -225,6 +246,76 @@ For some reason, a Dead Man’s Hand (two black Aces, two black 8s, and a Jack o
         "Four of a Kind": "6d12",
         "Straight Flush": "7d12",
         "Royal Flush": "8d12",
+      },
+    },
+  },
+  {
+    id: 11,
+    name: "Devil's Workshop",
+    trait: "Smarts",
+    hand: "Pair",
+    speed: "1 hour",
+    duration: "Special",
+    range: "1 yard",
+    description: `It’s not enough to simply have an idea for some outlandish device — somebody’s got to build it! Sitgreaves is a lazy inventor, so this was one of the first spells he created when he worked at Smith & Robards. This hex provides some supernatural help around the workshop by making the tinkerer faster, more efficient, and “insanely inspired.”\n
+The huckster can cast this hex on herself or any other character with arcane background: mad scientist. The hand drawn reduces the construction time as shown on the table below.\n
+This hex must be cast on a tinkerer when he first begins construction of a project. It is “permanent” thereafter, until the item is built or dismantled.`,
+    types: [hexType.utility],
+    handTable: {
+      effect: "Time Reduction",
+      hands: {
+        Pair: "10%",
+        "Two Pair": "20%",
+        "Three of a Kind": "30%",
+        Straight: "40%",
+        "Full House": "50%",
+        "Four of a Kind": "60%",
+        "Royal Flush": "75%",
+      },
+    },
+  },
+  {
+    id: 12,
+    name: "Mad Insight",
+    trait: "Spirit",
+    hand: "Ace",
+    speed: "1",
+    duration: "Instant",
+    range: "1 yard",
+    description: `This is the hex that started it all. Sitgreaves actually stumbled onto it accidentally, then later came back and refined the process. This hex works like a beacon to draw manitous to the mad scientist (or alchemist).\n
+The huckster can target himself or someone else with mad insight. When successfully cast, the hex allows a mad scientist to draw an extra card when devising her blueprint. For each hand above the minimum level needed to cast the hex, mad insight grants her an additional card.\n
+The real drawback to this hex is that if your huckster suffers backlash while casting the hex, the manitou is liable to get a swipe in at the scientist working with her as well! The huckster takes the normal effects of the backlash and a “research mishap” occurs as well. The Marshal should roll on that table in Smith & Robards if he has it. If not, he should devise some bizarre flaw for the device.`,
+    types: [hexType.buff],
+  },
+  {
+    id: 13,
+    name: "Reflect",
+    trait: "Spirit",
+    hand: "Special",
+    speed: "Vamoose",
+    duration: "Instant",
+    range: "Self",
+    description: `There’s a saying that goes the best offense is a good defense... or is that the best defense is a good offense? Whatever the case, this hex makes an opponent’s magical offense the huckster’s defense.\n
+This hex causes a jagged piece of highly reflective, magically-charged metal momentarily appears in the air to the front of your huckster. The mirror like metal substance is intangible to physical objects—bullets, fists, broken bottles, and so forth pass through it without any effect.\n
+However, the substance has a reflective property that affects not only light, but also some forms of magic. Hexes, black magic spells, voodoo spells, and Harrowed powers that have a targeted and ranged effect can be deflected with this hex. Area-of-effect spells or attacks cannot be reflected unless the caster is foolish enough to target it directly on the huckster.\n
+Because the hex has an instant duration, the huckster must cast reflect in response to her opponent’s spell. To do so, she must spend her highest action card - and a card up her sleeve is considered her highest - just like she’s taking an active defense, like dodge.\n
+If reflect is successful, the original caster suffers the effects of the spell or power he had intended for your hero.\n
+The opponent’s level in hexslingin’, conjurin’, black magic or the specific Harrowed power determines the hand necessary to successfully reflect the attack. The following table lists the hand necessary for each level.`,
+    types: [hexType.defense],
+    handTable: {
+      effect: "Opponent's Power Level",
+      hands: {
+        Ace: "1",
+        Pair: "2",
+        Jacks: "3",
+        "Two Pair": "4",
+        "Three of a Kind": "5",
+        Straight: "6",
+        Flush: "7",
+        "Full House": "8",
+        "Four of a Kind": "9",
+        "Straight Flush": "10",
+        "Royal Flush": "11",
       },
     },
   },

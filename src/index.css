@@ -111,6 +111,16 @@ h6 {
   color: #202020;
 }
 
+.App .utility-badge {
+  background-color: #f39c12;
+  color: white;
+}
+
+.App .defense-badge {
+  background-color: #34495e;
+  color: white;
+}
+
 .icon-button {
   background: none;
   border: none;
